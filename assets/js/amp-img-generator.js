@@ -11,9 +11,13 @@ var app = new Vue({
     getImageData: function () {
         var img = new Image();
         img.onload = function(){
+			// clear ukuran
+			app.width = '';
+			app.height = '';
+			
             // ambil ukuran gambar
-            app.width = this.width
-            app.height = this.height
+            app.width = this.width;
+            app.height = this.height;
         };
         img.src = this.src;
         console.log(this.src);
